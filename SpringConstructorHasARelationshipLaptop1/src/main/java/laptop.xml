@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+            
+         <!-- Beans -->  
+         
+       
+      
+         <bean id="one" class="org.jsp.Laptop">
+         <constructor-arg name="id" value="101"></constructor-arg>
+         <constructor-arg name="laptopName" value="Hp"></constructor-arg> 
+         <constructor-arg name="ram" value="5"></constructor-arg>
+         <constructor-arg name="price" value="100000"></constructor-arg>
+         <constructor-arg name="charger" ref="demo"></constructor-arg>
+         
+         </bean>
+         
+             <bean id="demo" class="org.jsp.Charger">
+         <constructor-arg name="id" value="101"></constructor-arg>
+         <constructor-arg name="chargerName" value="Hp"></constructor-arg> 
+         <constructor-arg name="color" value="white"></constructor-arg>
+         <constructor-arg name="price" value="700"></constructor-arg>
+         
+         
+        
+         </bean>
+         
+    
+         
+</beans>
